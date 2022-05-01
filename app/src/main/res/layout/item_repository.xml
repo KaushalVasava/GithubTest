@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_50">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".25" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivRepo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvRepoName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="2"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Github-Oauth" />
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/tvRepoName"
+            tools:text="kotlin" />
+
+        <TextView
+            android:id="@+id/tvVisibility"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/tvLanguage"
+            tools:text="public" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

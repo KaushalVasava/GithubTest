@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GithubTest</string>
+    <string name="star_count">Star Count : %d</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/repositoryFragment">
+
+    <fragment
+        android:id="@+id/repositoryFragment"
+        android:name="com.lahsuak.apps.githubtest.ui.fragments.RepositoryFragment"
+        android:label="Repositories"
+        tools:layout="@layout/fragment_repository">
+        <action
+            android:id="@+id/action_repositoryFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.lahsuak.apps.githubtest.ui.fragments.DetailFragment"
+        android:label="Details">
+        <argument
+            android:name="repo"
+            app:argType="com.lahsuak.apps.githubtest.model.Repository" />
+    </fragment>
+</navigation>
